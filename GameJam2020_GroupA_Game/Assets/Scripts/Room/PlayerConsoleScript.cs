@@ -122,20 +122,22 @@ public class PlayerConsoleScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        console = collision.gameObject;
-
-        //These are for getting the repair value, NOT READY YET
-
-        // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
-        //variableScriptName.functionName();
-
-
-        //Getting Repair Value (Used for first check)
-        percentRepair = console.GetComponent<ConsoleScript>().getRoomConsoleHealth();
-       
 
         if (collision.tag == "Console")
         {
+
+            console = collision.gameObject;
+
+            //These are for getting the repair value, NOT READY YET
+
+            // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
+            //variableScriptName.functionName();
+
+
+            //Getting Repair Value (Used for first check)
+            percentRepair = console.GetComponent<ConsoleScript>().getRoomConsoleHealth();
+
+
             Debug.Log("Console True");
             byConsole = true;
         }
