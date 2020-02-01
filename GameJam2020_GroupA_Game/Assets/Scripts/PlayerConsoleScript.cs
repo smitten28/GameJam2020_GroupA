@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// =============================================================
+// Player script for working with consoles. Consider removing debug before final implementation
+// =============================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,50 +25,90 @@ public class PlayerConsoleScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movementEnabled = GetComponent<MovementInside>().getMovementEnabled();
+        movementEnabled = GetComponent<MovementInside>().getMovementEnabled(); // Not sure if this is needed, mostly kept for Syntax
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
+
+
+
+
+        // =================================================
+        // Player interacts with Console
+
         if (byConsole)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+
+            //------------------------------------------------------------------------------------
+            //Get value of repair from nearby console
+            // -----------------------------------------------------------------------------------
+
+
+
+            if (percentRepair >= 100)
             {
-                isReady = true;
+                // NO NEED TO REPAIR CONDITION. UPDATE UI IN LATER EDITION
+                Debug.Log("Already Fixed");
             }
-
-            if (isReady = true && Input.GetKeyUp(KeyCode.Space))
+            else
             {
-  
-                    isRepairing = true;
-
-            }
-
-            if (isRepairing)
-            {
-
-                //This is where the repairing goes
-                Debug.Log("Repairing");
-
-                GetComponent<MovementInside>().setMovementEnabled(false);
-
-                percentRepair += (Time.deltaTime * repairSpeed);
+                //Console is broken. Option to repair
 
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Debug.Log("Done");
-                    isRepairing = false;
-                    isReady = false;
-                    byConsole = false; //THIS WILL NOT LET THE PLAYER TO CONTINUE
-                    GetComponent<MovementInside>().setMovementEnabled(true);
+                    isReady = true;
+                }
+
+                if (isReady = true && Input.GetKeyUp(KeyCode.Space))
+                {
+
+                    isRepairing = true;
+
+                }
+
+                if (isRepairing)
+                {
+
+                    //This is where the repairing goes
+                    Debug.Log("Repairing");
+
+                    GetComponent<MovementInside>().setMovementEnabled(false);
+
+                    percentRepair += (Time.deltaTime * repairSpeed);
+
+
+
+                    // Finished
+                    if (Input.GetKeyDown(KeyCode.Space) || percentRepair >= 100)
+                    {
+                        //Incase system passes 100%
+                        if (percentRepair > 100)
+                        {
+                            percentRepair = 100;
+                            Debug.Log("100");
+                        }
+
+                        //Reset for further repairs
+                        Debug.Log("Done");
+                        isRepairing = false;
+                        isReady = false;
+                        byConsole = false; //Stops the player from immediately continuing(or getting stuck)
+
+                        //--------------------------------------------------------------------------------------------------------------------
+                        //Return repair value to console script (or could constantly return it at percent repair but would need to constantly recieve as well)
+
+                        GetComponent<MovementInside>().setMovementEnabled(true);
+                    }
                 }
             }
-
         }
 
-
+        // =============================================================================
     }
 
 
