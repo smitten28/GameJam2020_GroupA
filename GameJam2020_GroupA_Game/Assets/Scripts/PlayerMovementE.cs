@@ -12,9 +12,9 @@ using UnityEngine;
 public class PlayerMovementE : MonoBehaviour
 {
 
-    [SerializedField]
+    [SerializeField]
     private float movementSpeed;
-    private Ridgidbody2D 
+    private Rigidbody2D playerRig;
 
     // Start is called before the first frame update
     void Start()
