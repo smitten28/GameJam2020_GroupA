@@ -10,10 +10,7 @@ public class MainVolume : MonoBehaviour
     [SerializeField] Slider slider;
     private float sliderValue;
 
-    public void Start()
-    {
-        FindObjectOfType<AudioManager>().play("InsideBackgroundMusic");
-    }
+
     public void setVolume()
     {
         sliderValue = slider.value;

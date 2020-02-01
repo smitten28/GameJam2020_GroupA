@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+
+    private Animator playerAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -16,6 +19,15 @@ public class StartMenu : MonoBehaviour
     {
         
     }
+    public void mouseHoverAnimation()
+    {
+        playerAnimator.SetBool("mouseHover", true);
+    }
+    public void mouseHoverExitAnimation()
+    {
+        playerAnimator.SetBool("mouseHover", false);
+    }
+
     public void planet01()
     {
         loadNextScene();
