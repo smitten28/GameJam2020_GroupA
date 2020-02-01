@@ -14,7 +14,15 @@ public class Timers : MonoBehaviour
     }
     public void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0.0");
+        if(currentTime > 60)
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("0");
+        }
+        else
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("0.0");
+        }
     }
 }
