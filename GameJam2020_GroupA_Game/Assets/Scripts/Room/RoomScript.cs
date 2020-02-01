@@ -41,7 +41,7 @@ public class RoomScript : MonoBehaviour
     }
 
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
         health -= dmg;
         if (health <= 0)

@@ -12,7 +12,7 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        Invoke("decay", bulletLife);
     }
 
     // Update is called once per frame
@@ -28,11 +28,19 @@ public class BulletScript : MonoBehaviour
 
     void decay()
     {
-
+        Destroy(gameObject);
     }
 
     public void setDirection(Vector3 direction)
     {
         this.direction = direction;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Room")
+        {
+            collision.gameObject.GetComponent<RoomScript>().TakeDamage(damageValue);
+        }
     }
 }
