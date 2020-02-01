@@ -39,6 +39,14 @@ public class PlayerConsoleScript : MonoBehaviour
     // ==============================================================
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        GameObject console = collision.gameObject;
+
+        //These are for getting the repair value, NOT READY YET
+
+       // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
+       //variableScriptName.functionName();
+
         if (collision.tag == "Console")
         {
             byConsole = true;
@@ -61,10 +69,11 @@ public class PlayerConsoleScript : MonoBehaviour
     private float repairing()
     {
         float percentRepair = 0;
+        bool finished = false;
 
         while(!Input.GetKeyDown(KeyCode.Space) && finished != true)
         {
-
+            //Insert 
         }
 
         return percentRepair;
