@@ -16,9 +16,11 @@ public class PlayerConsoleScript : MonoBehaviour
     [SerializeField]
     private float repairSpeed;
 
-    private float percentRepair = 0;
+    private float percentRepair = 0; //This may be obsolete
 
     private bool isReady = false;
+
+    private GameObject console;
 
 
 
@@ -50,7 +52,7 @@ public class PlayerConsoleScript : MonoBehaviour
 
 
 
-            if (percentRepair >= 100)
+            if (console.GetComponent<ConsoleScript>().getRoomConsoleHealth() >= console.GetComponent<ConsoleScript>().getMaxHealth())
             {
                 // NO NEED TO REPAIR CONDITION. UPDATE UI IN LATER EDITION
                 Debug.Log("Already Fixed");
@@ -80,28 +82,23 @@ public class PlayerConsoleScript : MonoBehaviour
 
                     GetComponent<MovementInside>().setMovementEnabled(false);
 
-                    percentRepair += (Time.deltaTime * repairSpeed);
+                    //Adds Health
+                    console.GetComponent<ConsoleScript>().addRoomConsoleHealth(Time.deltaTime * repairSpeed);
+
+                    Debug.Log(console.GetComponent<ConsoleScript>().getRoomConsoleHealth());
 
 
 
                     // Finished
-                    if (Input.GetKeyDown(KeyCode.Space) || percentRepair >= 100)
+                    if (Input.GetKeyDown(KeyCode.Space) || console.GetComponent<ConsoleScript>().getRoomConsoleHealth() >= console.GetComponent<ConsoleScript>().getMaxHealth())
                     {
-                        //Incase system passes 100%
-                        if (percentRepair > 100)
-                        {
-                            percentRepair = 100;
-                            Debug.Log("100");
-                        }
+
 
                         //Reset for further repairs
                         Debug.Log("Done");
                         isRepairing = false;
                         isReady = false;
                         byConsole = false; //Stops the player from immediately continuing(or getting stuck)
-
-                        //--------------------------------------------------------------------------------------------------------------------
-                        //Return repair value to console script (or could constantly return it at percent repair but would need to constantly recieve as well)
 
                         GetComponent<MovementInside>().setMovementEnabled(true);
                     }
@@ -125,7 +122,7 @@ public class PlayerConsoleScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        GameObject console = collision.gameObject;
+        console = collision.gameObject;
 
         //These are for getting the repair value, NOT READY YET
 
@@ -133,8 +130,8 @@ public class PlayerConsoleScript : MonoBehaviour
         //variableScriptName.functionName();
 
 
-        //Getting Repair Value
-        percentRepair = collision.gameObject.GetComponent<ConsoleScript>().getRoomConsoleHealth();
+        //Getting Repair Value (Used for first check)
+        percentRepair = console.GetComponent<ConsoleScript>().getRoomConsoleHealth();
        
 
         if (collision.tag == "Console")

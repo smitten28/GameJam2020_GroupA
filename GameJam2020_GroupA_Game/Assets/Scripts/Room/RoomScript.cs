@@ -40,7 +40,7 @@ public class RoomScript : MonoBehaviour
 
     public void addHealth(float health)
     {
-        if (maxHealth < this.health + health)
+        if (maxHealth > this.health + health)
         {
             this.health += health;
         }

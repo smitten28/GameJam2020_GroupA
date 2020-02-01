@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 197335335}
   - component: {fileID: 197335334}
   - component: {fileID: 197335333}
+  - component: {fileID: 197335336}
   m_Layer: 0
   m_Name: GroundE
   m_TagString: Untagged
@@ -225,10 +226,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.899, y: -1.25, z: 0}
   m_LocalScale: {x: 15.299416, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1176741135}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197335336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197335332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472bbb29ade84224aac9dcf29eec90e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 10
+  canBeRepaired: 0
 --- !u!1 &566033939
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024a8c66a23eab4f8eee2f95186b876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repairSpeed: 10
+  repairSpeed: 5
 --- !u!1 &1103207369
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,12 +625,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176741132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.508, y: -0.25, z: 0}
-  m_LocalScale: {x: 2.25, y: 1.017, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.039805427, y: 1, z: 0}
+  m_LocalScale: {x: 0.14706445, y: 1.017, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 197335335}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1176741136
 MonoBehaviour:
