@@ -112,5 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 20
-  movementSpeed: 0.5
+  maxSpeed: 5
+  minSpeed: 2
   heightRange: 1

@@ -393,7 +393,7 @@ Transform:
   m_LocalScale: {x: 4.877325, y: 12.408946, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &778264528
 BoxCollider2D:
@@ -473,10 +473,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrapPiece: {fileID: 2886509951744126874, guid: 499b3a91b66ef2a46b1a67a9c22e65ef,
     type: 3}
-  collectableCount: 10
+  collectableChance: 100
+  cooldown: 2
   range:
   - {x: -20, y: 5}
-  - {x: 10, y: -5}
+  - {x: 10, y: 5}
 --- !u!4 &995711750
 Transform:
   m_ObjectHideFlags: 0
@@ -487,7 +488,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.2555485, y: 1.4475427, z: -22.836939}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1087014583}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -516,12 +518,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087014582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.77328, y: 0.9128094, z: -37.157616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.48226857, y: -0.5347333, z: -14.320677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 995711750}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1087014584
 MonoBehaviour:

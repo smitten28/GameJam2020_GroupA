@@ -7,20 +7,24 @@ public class ScrapSpawnScriptF : MonoBehaviour
     [SerializeField]
     private GameObject scrapPiece;
     [SerializeField]
-    private float collectableCount;
+    private float collectableChance;
+    [SerializeField]
+    private float cooldown;
+    private float timeLeft;
+
     [SerializeField]
     private Vector2[] range;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnScrap();
+        //SpawnScrap();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SpawnScrap();
     }
 
     void SpawnScrap()
@@ -28,11 +32,19 @@ public class ScrapSpawnScriptF : MonoBehaviour
         float randX;
         float randY;
 
-        for(int i = 0; i < collectableCount; i++)
+        if (timeLeft <= 0)
         {
-            randX = Random.Range(range[0].x, range[1].x);
-            randY = Random.Range(range[0].y, range[1].y);
-            Instantiate(scrapPiece, new Vector3(randX, randY, 0), Quaternion.identity);
+            if (Random.Range(0f, 100f) <= collectableChance)
+            {
+                randX = Random.Range(range[0].x, range[1].x);
+                randY = Random.Range(range[0].y, range[1].y);
+                Instantiate(scrapPiece, new Vector3(randX, randY, 0), Quaternion.identity);
+            }
+            timeLeft = cooldown;
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
         }
     }
 }
