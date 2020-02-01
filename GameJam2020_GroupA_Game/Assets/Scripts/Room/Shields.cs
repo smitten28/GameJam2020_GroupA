@@ -6,7 +6,10 @@ public class Shields : MonoBehaviour
 {
     private float shieldHealth;
     private bool isActive;
-
+    private void Start()
+    {
+        transform.parent.GetComponent<GameManager>().updateShield(this.gameObject);
+    }
     public void takeDamage(float a)
     {
         if (shieldHealth - a <= 0)

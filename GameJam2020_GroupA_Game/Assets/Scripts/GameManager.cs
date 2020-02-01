@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     static public List<GameObject> rooms = new List<GameObject>();
+    static public GameObject shield;
     static private int maxShipPower;
     static private int usableShipPower;
     static private float lifeSupportTime;
@@ -37,7 +38,10 @@ public class GameManager : MonoBehaviour
     {
         return lifeSupportTime;
     }
-
+    public void updateShield(GameObject a)
+    {
+        shield = a;
+    }
     public int returnUsableShipPower()
     {
         return usableShipPower;
