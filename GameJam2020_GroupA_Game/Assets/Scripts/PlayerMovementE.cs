@@ -15,6 +15,8 @@ public class PlayerMovementE : MonoBehaviour
     [SerializeField]
     private float movementSpeed;
 
+    private float scrapCount;
+
     private float xAxis;
     private float yAxis;
     private float moveX;
@@ -48,4 +50,15 @@ public class PlayerMovementE : MonoBehaviour
         playerRig.velocity = new Vector2(moveX, moveY);
     }
 
- }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Collectable")
+        {
+            Destroy(collision.gameObject);
+            float value = collision.gameObject.GetComponent<ScrapScriptE>().getValue();
+            scrapCount += value;
+            Debug.Log("You have " + scrapCount + " Scrap");
+        }
+    }
+}
