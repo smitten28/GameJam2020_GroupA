@@ -42,9 +42,10 @@ public class PlayerConsoleScript : MonoBehaviour
 
         if (byConsole)
         {
+            
 
             //------------------------------------------------------------------------------------
-            //Get value of repair from nearby console
+            //Get value of repair from nearby console (Have it from initial Collide)
             // -----------------------------------------------------------------------------------
 
 
@@ -130,6 +131,11 @@ public class PlayerConsoleScript : MonoBehaviour
 
         // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
         //variableScriptName.functionName();
+
+
+        //Getting Repair Value
+        percentRepair = collision.gameObject.GetComponent<ConsoleScript>().getRoomConsoleHealth();
+       
 
         if (collision.tag == "Console")
         {
