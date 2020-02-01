@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AAngel.unity
+    guid: 5591df9643ac4cf4ba3a87067aeb54fd
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: bdd076c52553e9c459944678fba0dbab
+  - enabled: 1
+    path: Assets/Scenes/MainShip.unity
+    guid: 286ebcce0c6a7a3428e38bfc9c490165
   m_configObjects: {}
