@@ -150,17 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9144a26b7063c41a92ba79d8de4bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &48066779
 Transform:
   m_ObjectHideFlags: 0
@@ -483,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  upgradeCost: 0
   canBeRepaired: 0
 --- !u!4 &1673287292
 Transform:
