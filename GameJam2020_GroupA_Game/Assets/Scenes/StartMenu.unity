@@ -181,6 +181,55 @@ MonoBehaviour:
     loop: 1
     mixer: {fileID: 2340660772015688221, guid: d3c550f3c36004a4f863dcf0d1fee199, type: 2}
     source: {fileID: 0}
+  - name: ShipArrival
+    clip: {fileID: 8300000, guid: efbb89dd1bffdd443b7093c3137da1cf, type: 3}
+    volume: 0.191
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ShipHitNoShield
+    clip: {fileID: 8300000, guid: 98e0eed4e55b9144197af12556e0b520, type: 3}
+    volume: 0.265
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ShipHitShieldUp
+    clip: {fileID: 8300000, guid: bac80e013614f0140a6247f05eceab2c, type: 3}
+    volume: 0.32
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ShipLaunch
+    clip: {fileID: 8300000, guid: 2850ba16a4128ae4bb3d107c8d402838, type: 3}
+    volume: 0.271
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ScrapPickup01
+    clip: {fileID: 8300000, guid: 1eb2ec4d0af6d344f873f9722d055172, type: 3}
+    volume: 0.271
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ScrapPickup02
+    clip: {fileID: 8300000, guid: 5d753cc97e8f2914391d2265dd9d2133, type: 3}
+    volume: 0.271
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
+  - name: ScrapPickup03
+    clip: {fileID: 8300000, guid: 5d753cc97e8f2914391d2265dd9d2133, type: 3}
+    volume: 0.271
+    loop: 0
+    mixer: {fileID: -7671356064467357499, guid: d3c550f3c36004a4f863dcf0d1fee199,
+      type: 2}
+    source: {fileID: 0}
 --- !u!4 &53806638
 Transform:
   m_ObjectHideFlags: 0
