@@ -6,7 +6,7 @@ public class PlayerMovementF : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed;
-    private float scrapCount;
+    //private float scrapCount; Obselete
 
     private float xAxis;
     private float yAxis;
@@ -15,11 +15,14 @@ public class PlayerMovementF : MonoBehaviour
 
     private Rigidbody2D playerRig;
 
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRig = GetComponent<Rigidbody2D>();
+
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -45,8 +48,8 @@ public class PlayerMovementF : MonoBehaviour
 
             Destroy(collision.gameObject);
             float value = collision.gameObject.GetComponent<ScrapScriptF>().getValue();
-            scrapCount += value;
-            Debug.Log("You now have " + scrapCount + " scrap!");
+            gameManager.addScrap(value);
+            Debug.Log("You now have " + gameManager.returnScrap() + " scrap!");
         }
     }
 }

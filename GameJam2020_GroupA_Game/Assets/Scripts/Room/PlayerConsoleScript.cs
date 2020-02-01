@@ -77,7 +77,7 @@ public class PlayerConsoleScript : MonoBehaviour
                 if (isRepairing)
                 {
 
-                    //This is where the repairing goes
+                    //This is where the repairing goes --------------------------------
                     Debug.Log("Repairing");
 
                     GetComponent<MovementInside>().setMovementEnabled(false);

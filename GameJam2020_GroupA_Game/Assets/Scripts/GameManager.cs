@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     static private int fuel;
     static private int turretActve;
     static private int shieldTotalLevel;
-    static private int scrap;
+    static private float scrap;
     static private float enemyWaveTime;
     static private int phase;
     static private float maxWaveTime;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         updateTimings();
     }
-    public int returnScrap()
+    public float returnScrap()
     {
         return scrap;
     }
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     {
         rooms.Add(a);
     }
-    public void addScrap(int a)
+    public void addScrap(float a)
     {
         scrap += a;
     }
