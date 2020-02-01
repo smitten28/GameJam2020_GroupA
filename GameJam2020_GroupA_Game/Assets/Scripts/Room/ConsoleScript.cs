@@ -25,6 +25,8 @@ public class ConsoleScript : MonoBehaviour
 
     }
 
+
+    // -- Getters and Setters -----------------------------
     public float getRoomConsoleHealth()
     {
 
@@ -39,5 +41,12 @@ public class ConsoleScript : MonoBehaviour
     public float getMaxHealth()
     {
         return roomScript.maxHealth;
+    }
+    // --------------------------------------------------------------
+
+    //Not sure if this call is right or even necessary
+    public bool getCanBeRepaired()
+    {
+        return roomScript.canBeRepaired;
     }
 }
