@@ -8,7 +8,7 @@ public class MovementInside : MonoBehaviour
     private float inputHorz;
     private float inputVert;
     public float MoveVertspeed;
-    private bool spare;
+    private bool Ladder = false;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -28,17 +28,15 @@ public class MovementInside : MonoBehaviour
 
         if (inputHorz != 0)
         {
-            spare = false;
             HorizontalMovement();
 
-            Debug.Log(0);
         }
-        else if (inputVert != 0)
+        else if (inputVert != 0 && Ladder)
         {
-            spare = true;
+            
             VerticalMovement();
 
-            Debug.Log(1);
+            
         }
 
 
@@ -78,5 +76,13 @@ public class MovementInside : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, inputVert * MoveVertspeed);
         }
         
+    }
+    public void onLadder()
+    {
+        Ladder = true;
+    }
+    public void offLadder()
+    {
+        Ladder = false;
     }
 }
