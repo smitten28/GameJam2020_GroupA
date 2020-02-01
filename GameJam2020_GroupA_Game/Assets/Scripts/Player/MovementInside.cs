@@ -33,7 +33,7 @@ public class MovementInside : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
 
 
-            if (inputHorz != 0)
+            if (inputHorz != 0 && !Ladder)
             {
                 HorizontalMovement();
 
