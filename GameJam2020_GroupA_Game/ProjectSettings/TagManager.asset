@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Ground
   - Collectable
-  - Console
+  - Room
   layers:
   - Default
   - TransparentFX
