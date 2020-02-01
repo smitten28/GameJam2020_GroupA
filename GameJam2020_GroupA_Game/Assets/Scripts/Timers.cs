@@ -19,10 +19,14 @@ public class Timers : MonoBehaviour
             currentTime -= 1 * Time.deltaTime;
             countdownText.text = currentTime.ToString("0");
         }
-        else
+        else if(currentTime > 0)
         {
             currentTime -= 1 * Time.deltaTime;
             countdownText.text = currentTime.ToString("0.0");
+        }
+        else
+        {
+            currentTime = 0;
         }
     }
 }
