@@ -7,6 +7,7 @@ public class RoomScript : MonoBehaviour
     private GameManager manager;
     public float maxHealth;
     public float health;
+    [SerializeField]
     private bool isActive = false;
     private bool islocked = true;
     public int roomType;
@@ -75,6 +76,10 @@ public class RoomScript : MonoBehaviour
     public bool returnActiveStatus()
     {
         return isActive;
+    }
+    public float returnHealth()
+    {
+        return health;
     }
 
 

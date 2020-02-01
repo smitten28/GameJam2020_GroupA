@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     static private int maxShipPower;
     static private int usableShipPower;
     static private float lifeSupportTime;
+    static private float curLifeSupportTime;
     static private int fuel;
     static private int turretActve;
     static private int shieldTotalLevel;
@@ -115,8 +116,15 @@ public class GameManager : MonoBehaviour
     {
         lifeSupportTime += a;
     }
-    private void averageHealth()
+    private float averageHealth()
     {
-
+        int i = 0;
+        float number = 0;
+        foreach (GameObject room in rooms)
+        {
+            number += room.GetComponent<RoomScript>().returnHealth();
+            i++;
+        }
+        return number / i;
     }
 }
