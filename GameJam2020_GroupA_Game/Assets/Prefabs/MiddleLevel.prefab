@@ -119,9 +119,10 @@ GameObject:
   - component: {fileID: 4023427008791097580}
   - component: {fileID: 4023427008791097581}
   - component: {fileID: -5190497308340732529}
+  - component: {fileID: 7308347989600091508}
   m_Layer: 0
   m_Name: MiddleLevel
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,8 +212,35 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   roomType: 0
+  maxRoomUpgrades: 0
   upgradeCost: 0
   canBeRepaired: 0
+--- !u!61 &7308347989600091508
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023427008791097570}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0020717382, y: -0.015855908}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 2.67}
+    newSize: {x: 4, y: 2.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0267, y: 2.701712}
+  m_EdgeRadius: 0
 --- !u!1 &4023427008996265678
 GameObject:
   m_ObjectHideFlags: 0

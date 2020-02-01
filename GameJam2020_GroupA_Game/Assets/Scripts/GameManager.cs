@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     static private float enemyWaveTime;
     static private int phase;
     static private float maxWaveTime;
+    private void Start()
+    {
+
+    }
     private void Update()
     {
         updateTimings();
