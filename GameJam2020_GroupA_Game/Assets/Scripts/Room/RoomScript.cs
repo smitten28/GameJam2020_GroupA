@@ -79,6 +79,38 @@ public class RoomScript : MonoBehaviour
             {
                 //you can pay for the upgrade
                 roomUpgrade += 1;
+                if (roomType == 0)
+                {
+                    manager.addPower(2);
+                }
+                else if (roomType == 1)
+                {
+                    //life support
+                }
+                else if (roomType == 2)
+                {
+                    //engines
+                }
+                else if (roomType == 3)
+                {
+                    //navigation
+                }
+                else if (roomType == 4)
+                {
+                    //airlock
+                }
+                else if (roomType == 5)
+                {
+                    //turrets
+                    manager.addTurret(2);
+                }
+                else if (roomType == 6)
+                {
+                    //sheilds
+                    manager.addShield(2);
+                }
+
+
             }
         }
     }

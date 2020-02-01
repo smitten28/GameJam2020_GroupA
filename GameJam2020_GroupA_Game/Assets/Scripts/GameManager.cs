@@ -30,5 +30,20 @@ public class GameManager : MonoBehaviour
     {
         return usableShipPower;
     }
-
+    public int returnTurretsActive()
+    {
+        return turretActve;
+    }
+    public void addPower(int a)
+    {
+        maxShipPower += a;
+    }
+    public void addTurret(int a)
+    {
+        turretActve += a;
+    }
+    public void addShield(int a)
+    {
+        shieldTotalLevel += a;
+    }
 }
