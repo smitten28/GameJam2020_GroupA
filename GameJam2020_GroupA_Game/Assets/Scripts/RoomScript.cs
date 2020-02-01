@@ -7,14 +7,29 @@ public class RoomScript : MonoBehaviour
     public float maxHealth;
     public float health;
     private bool isActive = false;
+    private bool islocked = true;
+    private int roomType;
+    private int maxRoomUpgrades;
+    private int roomUpgrade;
+    public bool canBeRepaired;
+
+    //
     //defaulted to false for start
 
     private void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && isActive)
         {
             isActive = false;
-        }    
+            health = 0;
+
+        }
+
+        if (health > 0 && !isActive)
+        {
+            isActive = true;
+
+        }
     }
 
 
@@ -33,6 +48,16 @@ public class RoomScript : MonoBehaviour
         {
             this.health = maxHealth;
         }
-
     }
+
+    public int returnRoomType()
+    {
+        return roomType;
+    }
+    public int returnRoomUpgrade()
+    {
+        return roomUpgrade;
+    }
+
+
 }
