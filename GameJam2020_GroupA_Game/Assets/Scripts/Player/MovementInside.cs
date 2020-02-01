@@ -13,10 +13,12 @@ public class MovementInside : MonoBehaviour
     public float MoveVertspeed;
     private bool Ladder = false;
     private Rigidbody2D rb;
+    private Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 
 
@@ -29,6 +31,19 @@ public class MovementInside : MonoBehaviour
 
             inputHorz = Input.GetAxisRaw("Horizontal");
             inputVert = Input.GetAxisRaw("Vertical");
+
+            Debug.Log(inputHorz);
+
+            if (inputHorz == 0)
+            {
+                Debug.Log("isWalking False");
+                playerAnimator.SetBool("isWalking", false);
+            }
+            else
+            {
+                Debug.Log("isWalking True");
+                playerAnimator.SetBool("isWalking", true);
+            }
 
             rb.velocity = new Vector2(0, 0);
 
@@ -53,19 +68,20 @@ public class MovementInside : MonoBehaviour
 
     private void HorizontalMovement()
     {
+        
         if (inputHorz != 0 && inputVert == 0)
         {
             rb.velocity = new Vector2(inputHorz * MoveHorzspeed, rb.velocity.y);
             if (inputHorz > 0)
             {
-                flipPlayerRight();
+                flipPlayerLeft();
             }
             else if (inputHorz < 0)
             {
-                flipPlayerLeft();
+                flipPlayerRight();
+                
             }
         }
-        inputHorz = 0;
     }
     private void flipPlayerLeft()
     {
