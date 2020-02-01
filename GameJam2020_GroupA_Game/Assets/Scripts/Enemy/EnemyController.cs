@@ -92,6 +92,7 @@ public class EnemyController : MonoBehaviour
 
         if (collision.tag == "Shield")
         {
+            collision.gameObject.GetComponent<Shields>().takeDamage(enemyHealth);
             Destroy(gameObject);
         }
     }

@@ -47,6 +47,7 @@ public class BulletScript : MonoBehaviour
 
         if(collision.tag == "Shield" && !targetEnemy)
         {
+            collision.gameObject.GetComponent<Shields>().takeDamage(damageValue);
             Destroy(gameObject);
         }
 
