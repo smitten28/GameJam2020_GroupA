@@ -4,27 +4,68 @@ using UnityEngine;
 
 public class PlayerConsoleScript : MonoBehaviour
 {
+    private bool isRepairing = false;
 
     private bool movementEnabled;
 
     private bool byConsole = false;
 
+    [SerializeField]
+    private float repairSpeed;
+
+    private float percentRepair = 0;
+
+    private bool isReady = false;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-       movementEnabled = GetComponent<MovementInside>().getMovementEnabled();
+        movementEnabled = GetComponent<MovementInside>().getMovementEnabled();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (byConsole == true && Input.GetKeyDown(KeyCode.Space))
+        if (byConsole)
         {
-            repairing();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isReady = true;
+            }
+
+            if (isReady = true && Input.GetKeyUp(KeyCode.Space))
+            {
+  
+                    isRepairing = true;
+
+            }
+
+            if (isRepairing)
+            {
+
+                //This is where the repairing goes
+                Debug.Log("Repairing");
+
+                GetComponent<MovementInside>().setMovementEnabled(false);
+
+                percentRepair += (Time.deltaTime * repairSpeed);
+
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Debug.Log("Done");
+                    isRepairing = false;
+                    isReady = false;
+                    byConsole = false; //THIS WILL NOT LET THE PLAYER TO CONTINUE
+                    GetComponent<MovementInside>().setMovementEnabled(true);
+                }
+            }
+
         }
+
+
     }
 
 
@@ -44,11 +85,12 @@ public class PlayerConsoleScript : MonoBehaviour
 
         //These are for getting the repair value, NOT READY YET
 
-       // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
-       //variableScriptName.functionName();
+        // ScriptName varibaleScriptName = console.GetComponent<ScriptName>();
+        //variableScriptName.functionName();
 
         if (collision.tag == "Console")
         {
+            Debug.Log("Console True");
             byConsole = true;
         }
     }
@@ -57,25 +99,10 @@ public class PlayerConsoleScript : MonoBehaviour
     {
         if (collision.tag == "Console")
         {
+            Debug.Log("Console False");
             byConsole = false;
         }
     }
     // ================================================================
 
-
-
-
-        //THIS FUNCTION SETS byConsole TO FALSE. Player must leave and re-enter to do it again
-    private float repairing()
-    {
-        float percentRepair = 0;
-        bool finished = false;
-
-        while(!Input.GetKeyDown(KeyCode.Space) && finished != true)
-        {
-            //Insert 
-        }
-
-        return percentRepair;
-    }
 }
