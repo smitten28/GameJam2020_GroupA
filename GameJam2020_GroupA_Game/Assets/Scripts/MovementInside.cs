@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MovementInside : MonoBehaviour
 {
+    private bool movementEnabled = true; //True by default, change by the function bello
+    
+    
     public float MoveHorzspeed;
     private float inputHorz;
     private float inputVert;
@@ -20,28 +23,32 @@ public class MovementInside : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputHorz = Input.GetAxisRaw("Horizontal");
-        inputVert = Input.GetAxisRaw("Vertical");
-
-        rb.velocity = new Vector2(0, 0);
-
-
-        if (inputHorz != 0)
+        if (movementEnabled == true)
         {
-            HorizontalMovement();
+
+
+            inputHorz = Input.GetAxisRaw("Horizontal");
+            inputVert = Input.GetAxisRaw("Vertical");
+
+            rb.velocity = new Vector2(0, 0);
+
+
+            if (inputHorz != 0)
+            {
+                HorizontalMovement();
+
+            }
+            else if (inputVert != 0 && Ladder)
+            {
+
+                VerticalMovement();
+
+
+            }
+
+
 
         }
-        else if (inputVert != 0 && Ladder)
-        {
-            
-            VerticalMovement();
-
-            
-        }
-
-
-
-
     }
 
     private void HorizontalMovement()
@@ -85,4 +92,19 @@ public class MovementInside : MonoBehaviour
     {
         Ladder = false;
     }
+
+
+
+    // Changing the state of movementEnabled
+    public void setMovementEnabled(bool state)
+    {
+        movementEnabled = state;
+    }
+
+    public bool getMovementEnabled()
+    {
+        return movementEnabled;
+    }
+
+
 }
