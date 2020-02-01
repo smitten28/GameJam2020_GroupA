@@ -9,7 +9,11 @@ public class HealthBarScript : MonoBehaviour
 
     private Transform bar;
 
+    private Transform background;
+
     private Color colGreen = new Color32(19, 142, 14, 255);
+
+    private Color colGrey = new Color32(53, 53, 53, 255);
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,8 @@ public class HealthBarScript : MonoBehaviour
         roomScript = transform.parent.gameObject.GetComponent<RoomScript>();
 
         bar = transform.Find("Bar");
+
+        background = transform.Find("Background");
     }
 
     // Update is called once per frame
@@ -24,19 +30,25 @@ public class HealthBarScript : MonoBehaviour
     {
         
         bar.localScale = new Vector3(1f, (roomScript.health / roomScript.maxHealth));
-
-        if ((roomScript.health / roomScript.maxHealth) * 100 <= 10)
+        if(roomScript.health <= 0)
+        {
+            setBackHealthColor(Color.red);
+        }
+        else if ((roomScript.health / roomScript.maxHealth) * 100 <= 10)
         {
             setHealthColor(Color.red);
+            setBackHealthColor(colGrey);
         }
         else if((roomScript.health / roomScript.maxHealth) * 100 <= 35)
         {
             setHealthColor(Color.yellow);
+            setBackHealthColor(colGrey);
 
         }
         else
         {
             setHealthColor(colGreen);
+            setBackHealthColor(colGrey);
         }
     }
 
@@ -46,4 +58,8 @@ public class HealthBarScript : MonoBehaviour
         bar.Find("BarSprite").GetComponent<SpriteRenderer>().color = color;
     }
 
+    private void setBackHealthColor(Color color)
+    {
+        background.GetComponent<SpriteRenderer>().color = color;
+    }
 }
