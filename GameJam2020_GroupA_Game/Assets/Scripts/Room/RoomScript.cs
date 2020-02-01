@@ -9,8 +9,8 @@ public class RoomScript : MonoBehaviour
     public float health;
     private bool isActive = false;
     private bool islocked = true;
-    private int roomType;
-    private int maxRoomUpgrades;
+    public int roomType;
+    public int maxRoomUpgrades;
     private int roomUpgrade;
     public int upgradeCost;
     public bool canBeRepaired;

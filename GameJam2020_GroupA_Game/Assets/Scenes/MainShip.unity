@@ -560,6 +560,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: roomType
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4023427008289662122, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: m_Enabled
@@ -992,6 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420530114}
+  - component: {fileID: 420530115}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -1026,6 +1032,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420530115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420530113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9144a26b7063c41a92ba79d8de4bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &421212206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
@@ -1280,6 +1298,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: roomType
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4023427008289662122, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: m_Enabled
@@ -1522,6 +1545,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: roomType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3385,6 +3413,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: roomType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3486,6 +3519,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3654,6 +3692,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: roomType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4023427008791097570, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: m_Name
