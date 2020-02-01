@@ -72,6 +72,11 @@ public class RoomScript : MonoBehaviour
     {
         return roomUpgrade;
     }
+    public bool returnActiveStatus()
+    {
+        return isActive;
+    }
+
 
     private void upgradeRoom()
     {
@@ -84,24 +89,28 @@ public class RoomScript : MonoBehaviour
                 roomUpgrade += 1;
                 if (roomType == 0)
                 {
-                    //powerroom
-                    manager.addPower(2);
+                    //empty room
+                    
                 }
                 else if (roomType == 1)
                 {
                     //life support
+                    manager.addLifeSupportTime(30);
                 }
                 else if (roomType == 2)
                 {
-                    //engines
+                    //powerSupply
+                    manager.addPower(2);
                 }
                 else if (roomType == 3)
                 {
-                    //navigation
+                    //workshop
+
                 }
                 else if (roomType == 4)
                 {
-                    //airlock
+                    //engine room
+
                 }
                 else if (roomType == 5)
                 {

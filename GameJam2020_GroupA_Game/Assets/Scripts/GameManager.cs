@@ -106,4 +106,17 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    public void buildRoom(int a)
+    {
+        //empty room is building another roomtype
+
+    }
+    public void addLifeSupportTime(int a)
+    {
+        lifeSupportTime += a;
+    }
+    private void averageHealth()
+    {
+
+    }
 }
