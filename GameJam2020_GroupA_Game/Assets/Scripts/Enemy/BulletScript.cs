@@ -7,6 +7,7 @@ public class BulletScript : MonoBehaviour
     [SerializeField] private float damageValue;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLife;
+    [SerializeField] private bool targetEnemy;
     private Vector3 direction;
 
     // Start is called before the first frame update
@@ -38,9 +39,24 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Room")
+        if(collision.tag == "Room" && !targetEnemy)
         {
             collision.gameObject.GetComponent<RoomScript>().TakeDamage(damageValue);
+            Destroy(gameObject);
+        }
+
+        if(collision.tag == "Shield" && !targetEnemy)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy") && targetEnemy)
+        {
+            collision.gameObject.GetComponent<EnemyController>().takeDamage(damageValue);
             Destroy(gameObject);
         }
     }

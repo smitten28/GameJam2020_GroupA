@@ -25,6 +25,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
         if(checkDistance() > stoppingDistance)
         {
             follow();
@@ -34,7 +39,7 @@ public class EnemyController : MonoBehaviour
             fire();
         }
 
-        if(!activeTarget.GetComponent<RoomScript>().isActiveAndEnabled)
+        if(!activeTarget.GetComponent<RoomScript>().returnActiveStatus())
         {
             findTarget();
         }
@@ -44,7 +49,7 @@ public class EnemyController : MonoBehaviour
     {
         foreach(GameObject room in targets)
         {
-            if(room.GetComponent<RoomScript>().isActiveAndEnabled)
+            if(room.GetComponent<RoomScript>().returnActiveStatus())
             {
                 activeTarget = room;
             }
@@ -84,5 +89,16 @@ public class EnemyController : MonoBehaviour
             collision.gameObject.GetComponent<RoomScript>().TakeDamage(enemyHealth);
             Destroy(gameObject);
         }
+
+        if (collision.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void takeDamage(float dmg)
+    {
+        enemyHealth -= dmg;
+        Debug.Log(enemyHealth + " health remaining");
     }
 }
