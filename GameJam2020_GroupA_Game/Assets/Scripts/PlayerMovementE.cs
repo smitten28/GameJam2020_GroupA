@@ -14,6 +14,12 @@ public class PlayerMovementE : MonoBehaviour
 
     [SerializeField]
     private float movementSpeed;
+
+    private float xAxis;
+    private float yAxis;
+    private float moveX;
+    private float moveY;
+
     private Rigidbody2D playerRig;
 
     // Start is called before the first frame update
@@ -25,16 +31,21 @@ public class PlayerMovementE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
+        Movement();
     }
 
 
     //Functions 
 
-    void movement()
+    void Movement()
     {
-        float direction = Input.GetAxisRaw("Horizontal");
-        float move = direction * movementSpeed * Time.deltaTime;
-        playerRig.velocity = new Vector2(move, playerRig.velocity.y);
+        xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
+
+        moveX = xAxis * movementSpeed;
+        moveY = yAxis * movementSpeed;
+
+        playerRig.velocity = new Vector2(moveX, moveY);
     }
+
  }
