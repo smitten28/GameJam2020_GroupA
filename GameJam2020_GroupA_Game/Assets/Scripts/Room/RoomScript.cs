@@ -20,6 +20,8 @@ public class RoomScript : MonoBehaviour
     private void Start()
     {
         manager = GameObject.Find("SpaceShip").GetComponent<GameManager>();
+        manager.addRoom(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
     private void Update()
     {
@@ -35,6 +37,7 @@ public class RoomScript : MonoBehaviour
             isActive = true;
 
         }
+        
     }
 
 
@@ -81,6 +84,7 @@ public class RoomScript : MonoBehaviour
                 roomUpgrade += 1;
                 if (roomType == 0)
                 {
+                    //powerroom
                     manager.addPower(2);
                 }
                 else if (roomType == 1)
@@ -114,6 +118,4 @@ public class RoomScript : MonoBehaviour
             }
         }
     }
-
-
 }

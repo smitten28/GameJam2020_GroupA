@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    static public GameObject[] rooms;
-    private int maxShipPower;
-    private int usableShipPower;
-    private int lifeSupportTime;
-    private int fuel;
-    private int turretActve;
-    private int shieldTotalLevel;
-    private int scrap;
-    
+    static public List<GameObject> rooms = new List<GameObject>();
+    static private int maxShipPower;
+    static private int usableShipPower;
+    static private int lifeSupportTime;
+    static private int fuel;
+    static private int turretActve;
+    static private int shieldTotalLevel;
+    static private int scrap;
+
     public int returnScrap()
     {
         return scrap;
@@ -46,4 +47,10 @@ public class GameManager : MonoBehaviour
     {
         shieldTotalLevel += a;
     }
+    public void addRoom(GameObject a)
+    {
+        rooms.Add(a);
+    }
+
+    
 }
