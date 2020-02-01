@@ -14,7 +14,12 @@ public class GameManager : MonoBehaviour
     static private int shieldTotalLevel;
     static private int scrap;
     static private float enemyWaveTime;
-
+    static private int phase;
+    static private float maxWaveTime;
+    private void Update()
+    {
+        updateTimings();
+    }
     public int returnScrap()
     {
         return scrap;
@@ -67,5 +72,34 @@ public class GameManager : MonoBehaviour
     public void subtrFuel(int a)
     {
         fuel -= a;
+    }
+    private void updateTimings()
+    {
+        if (phase == 0)
+        {
+            //phase 0 is repair phase
+        }
+        else if (phase == 1)
+        {
+            //phase 1 is defense
+            enemyWaveTime -= Time.deltaTime;
+            if (enemyWaveTime <= 0)
+            {
+                startEnemyWave();
+            }
+        }
+        else if (phase == 2)
+        {
+
+        }
+    }
+    private void countDownTimer()
+    {
+        //count down timer for enemy waves
+
+    }
+    private void startEnemyWave()
+    {
+
     }
 }
