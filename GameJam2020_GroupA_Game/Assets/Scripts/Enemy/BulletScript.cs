@@ -41,6 +41,7 @@ public class BulletScript : MonoBehaviour
         if(collision.tag == "Room")
         {
             collision.gameObject.GetComponent<RoomScript>().TakeDamage(damageValue);
+            Destroy(gameObject);
         }
     }
 }

@@ -76,4 +76,13 @@ public class EnemyController : MonoBehaviour
     {
         return Vector2.Distance(transform.position, activeTarget.transform.position);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Room")
+        {
+            collision.gameObject.GetComponent<RoomScript>().TakeDamage(enemyHealth);
+            Destroy(gameObject);
+        }
+    }
 }
