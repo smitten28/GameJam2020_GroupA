@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 4566052227737213274}
   - component: {fileID: 4566052227737213273}
   - component: {fileID: 4566052227737213269}
+  - component: {fileID: -3394647733654892171}
   m_Layer: 0
   m_Name: OnShipTac
   m_TagString: Untagged
@@ -448,6 +449,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveHorzspeed: 2
   MoveVertspeed: 5
+--- !u!114 &-3394647733654892171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566052227737213272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9024a8c66a23eab4f8eee2f95186b876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repairSpeed: 0
 --- !u!1 &4566052227786708740
 GameObject:
   m_ObjectHideFlags: 0

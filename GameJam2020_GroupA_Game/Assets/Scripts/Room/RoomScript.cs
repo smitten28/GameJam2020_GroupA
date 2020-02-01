@@ -114,7 +114,7 @@ public class RoomScript : MonoBehaviour
                     manager.addShield(2);
                 }
 
-
+                manager.subtrScrap(upgradeCost);
             }
         }
     }

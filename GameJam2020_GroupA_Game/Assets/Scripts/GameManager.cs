@@ -8,11 +8,12 @@ public class GameManager : MonoBehaviour
     static public List<GameObject> rooms = new List<GameObject>();
     static private int maxShipPower;
     static private int usableShipPower;
-    static private int lifeSupportTime;
+    static private float lifeSupportTime;
     static private int fuel;
     static private int turretActve;
     static private int shieldTotalLevel;
     static private int scrap;
+    static private float enemyWaveTime;
 
     public int returnScrap()
     {
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         return fuel;
     }
-    public int returnLifeSupportTime()
+    public float returnLifeSupportTime()
     {
         return lifeSupportTime;
     }
@@ -51,6 +52,20 @@ public class GameManager : MonoBehaviour
     {
         rooms.Add(a);
     }
-
-    
+    public void addScrap(int a)
+    {
+        scrap += a;
+    }
+    public void addFuel(int a)
+    {
+        fuel += a;
+    }
+    public void subtrScrap(int a)
+    {
+        scrap -= a;
+    }
+    public void subtrFuel(int a)
+    {
+        fuel -= a;
+    }
 }
