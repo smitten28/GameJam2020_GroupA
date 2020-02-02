@@ -131,12 +131,27 @@ PrefabInstance:
     - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
       propertyPath: health
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
       propertyPath: isActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: roomType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1315212677534589440, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
@@ -573,7 +588,17 @@ PrefabInstance:
     - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: maxRoomUpgrades
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4023427008289662122, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
@@ -1230,6 +1255,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: roomType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1315212677534589440, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1312,7 +1352,17 @@ PrefabInstance:
     - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: roomType
-      value: 6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4023427008289662122, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
@@ -1559,7 +1609,17 @@ PrefabInstance:
     - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: roomType
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
@@ -2292,6 +2352,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: roomType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1315212677534589440, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
       propertyPath: m_SortingOrder
@@ -2387,6 +2462,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: roomType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4023427008289662122, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: m_Enabled
@@ -2477,6 +2567,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7209448232305370983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1273524794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4023427008791097570, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+    type: 3}
+  m_PrefabInstance: {fileID: 271288941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1273524795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273524794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a540f574e29b40a4c9bf446757f81e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decaySpeed: 2
 --- !u!1 &1287895353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3579,7 +3688,7 @@ PrefabInstance:
     - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: roomType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
@@ -3589,6 +3698,16 @@ PrefabInstance:
     - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: upgradeCost
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
@@ -3695,7 +3814,17 @@ PrefabInstance:
     - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: roomType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: maxRoomUpgrades
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
@@ -3868,7 +3997,7 @@ PrefabInstance:
     - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
       propertyPath: roomType
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
@@ -3879,6 +4008,16 @@ PrefabInstance:
         type: 3}
       propertyPath: isActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5190497308340732529, guid: 8c524424ebf52ce47b4a68f1efebbe30,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4023427008791097570, guid: 8c524424ebf52ce47b4a68f1efebbe30,
         type: 3}
@@ -3969,6 +4108,16 @@ PrefabInstance:
       propertyPath: isActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171232361470012520, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4054,6 +4203,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420530114}
     m_Modifications:
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: roomType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: maxRoomUpgrades
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4359108791303372493, guid: 774021b8482dd61478d0a3a815463d02,
+        type: 3}
+      propertyPath: upgradeCost
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1315212678313014855, guid: 774021b8482dd61478d0a3a815463d02,
         type: 3}
       propertyPath: m_LocalPosition.x

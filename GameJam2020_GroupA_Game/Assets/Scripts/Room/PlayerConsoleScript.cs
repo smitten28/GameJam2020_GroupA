@@ -107,6 +107,7 @@ public class PlayerConsoleScript : MonoBehaviour
             //checking for upgrade after is by and has full heal
             if (console.GetComponent<ConsoleScript>().getRoomConsoleHealth() == console.GetComponent<ConsoleScript>().getMaxHealth())
             {
+
                 //the console has max health
                 if (Input.GetKeyDown(KeyCode.E))
                 {
