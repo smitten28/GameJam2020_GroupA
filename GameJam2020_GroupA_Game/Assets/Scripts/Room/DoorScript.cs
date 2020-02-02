@@ -20,6 +20,7 @@ public class DoorScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && inRange)
         {
             animator.SetBool("isOpen", true);
+            FindObjectOfType<AudioManager>().playOneShot("DoorOpen");
         }
     }
 

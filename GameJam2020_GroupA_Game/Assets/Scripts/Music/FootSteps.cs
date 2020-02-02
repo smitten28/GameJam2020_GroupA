@@ -18,7 +18,7 @@ public class FootSteps : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-    private void step()
+    private void Step()
     {
         AudioClip clip = getRandomClip();
         audioSource.PlayOneShot(clip);

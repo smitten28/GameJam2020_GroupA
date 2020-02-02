@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+        s.source.Stop();
     }
     public void playOneShot(string name)
     {
