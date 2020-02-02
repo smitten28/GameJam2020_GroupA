@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
     {
         fuel += a;
     }
-    public void subtrScrap(int a)
+    public void subtrScrap(float a)
     {
         scrap -= a;
     }
