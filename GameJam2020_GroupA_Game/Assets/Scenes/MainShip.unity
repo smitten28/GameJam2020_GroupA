@@ -3978,6 +3978,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 930678912}
     m_Modifications:
+    - target: {fileID: 284070739642468944, guid: cd183927e316d6d4f8c11b5fe71f4411,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 284070739642468948, guid: cd183927e316d6d4f8c11b5fe71f4411,
         type: 3}
       propertyPath: m_Name
@@ -4107,6 +4112,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 803136119065634424, guid: e26d76a358254bc438e4f40af70b27e8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e26d76a358254bc438e4f40af70b27e8, type: 3}
 --- !u!1001 &2740672434343425629
@@ -4116,6 +4126,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 930678912}
     m_Modifications:
+    - target: {fileID: 2740672433859865172, guid: ee0a2ac0b763dec42acf9821aef04b51,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2740672433859865173, guid: ee0a2ac0b763dec42acf9821aef04b51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4245,6 +4260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishTankTopWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4751961706537027599, guid: 08431434488562f4cbcf46ab6a66f0f5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08431434488562f4cbcf46ab6a66f0f5, type: 3}
 --- !u!1001 &4868630944974096318
@@ -4362,6 +4382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FishTankBottomWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137938516419671442, guid: f2e288a47946634489b81d1285207a32,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6137938516419671443, guid: f2e288a47946634489b81d1285207a32,
         type: 3}
@@ -4491,6 +4516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: moveSpeed
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398060666075063702, guid: 01e56f00d0286c24ba4ecf09894c2cc1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01e56f00d0286c24ba4ecf09894c2cc1, type: 3}

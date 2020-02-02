@@ -14,7 +14,7 @@ public class PlayerConsoleScript : MonoBehaviour
     private bool byConsole = false;
 
     [SerializeField]
-    static private float repairSpeed;
+    private float repairSpeed;
 
     private float percentRepair = 0; //This may be obsolete
 
@@ -99,7 +99,11 @@ public class PlayerConsoleScript : MonoBehaviour
                         isRepairing = false;
                         isReady = false;
                         byConsole = false; //Stops the player from immediately continuing(or getting stuck)
+                        if (console.GetComponent<ConsoleScript>().getRoomScript().returnRoomType() == 2)
+                        {
                         console.transform.parent.GetComponent<ReactorRoom>().setIsEverRepaired();
+                        }
+
                         GetComponent<MovementInside>().setMovementEnabled(true);
                     }
                 }

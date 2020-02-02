@@ -18,16 +18,15 @@ public class fishMovement : MonoBehaviour
         fishRb.velocity = new Vector2(moveSpeed, fishRb.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.CompareTag("FishTankLeftWall"))
         {
             moveSpeed *= -1;
             //need to do this becuase the fish have an animation
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
-        else if(collision.gameObject.CompareTag("FishTankRightWall"))
+        else if (collision.gameObject.CompareTag("FishTankRightWall"))
         {
             moveSpeed *= -1;
             //need to do this becuase the fish have an animation
