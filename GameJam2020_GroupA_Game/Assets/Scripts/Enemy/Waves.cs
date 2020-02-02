@@ -26,12 +26,14 @@ public class Waves : MonoBehaviour
     private void Start()
     {
         restartTimer();
-        spawnEnemy();
-        if (curWave + 1 > maxWaves)
+        if (curWave + 1 <= maxWaves)
         {
             //starts new wave on load
+            curWave++;
 
         }
+        spawnEnemy();
+
     }
 
     private void Update()
