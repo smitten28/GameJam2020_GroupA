@@ -1132,6 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420530114}
   - component: {fileID: 420530115}
+  - component: {fileID: 420530116}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -1179,6 +1180,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9144a26b7063c41a92ba79d8de4bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &420530116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420530113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a163e800003fd424885aa7cdcac3d5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWaves: 5
+  maxTimePerWave: 120
+  waveTime: 120
+  maxTimeInBetweenWave: 0
+  timeBetweenWave: 0
+  maxEnemies: 10
+  enemy1Prefab: {fileID: 6186928968044356901, guid: d2b9434d88e4e994494580a6fe8f5311,
+    type: 3}
+  enemy2Prefab: {fileID: 6462184455922204265, guid: 4bd670136eacf5b4c927453c980df4e5,
+    type: 3}
+  range:
+  - {x: -30, y: 20}
+  - {x: 30, y: 25}
+  waveText: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!4 &421212206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6548236077795798452, guid: e059b1a6e8ec08a4885fbf5cebc605ae,

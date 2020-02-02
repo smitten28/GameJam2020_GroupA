@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Waves : MonoBehaviour
 {
     public int maxWaves;
-    static public int curWave;
+    static public int curWave = 0;
     public float maxTimePerWave;
     public float waveTime;
     public float maxTimeInBetweenWave;
@@ -27,6 +27,11 @@ public class Waves : MonoBehaviour
     {
         restartTimer();
         spawnEnemy();
+        if (curWave + 1 > maxWaves)
+        {
+            //starts new wave on load
+
+        }
     }
 
     private void Update()
@@ -34,7 +39,6 @@ public class Waves : MonoBehaviour
         if (waveTime > 0)
         {
             updateText();
-
             waveTime -= Time.deltaTime;
             if (waveTime <= 0)
             {
@@ -70,7 +74,6 @@ public class Waves : MonoBehaviour
                 //spawn enemy2
                 Instantiate(enemy2Prefab, new Vector3(randX, randY, 0), Quaternion.identity);
             }
-
         }
     }
 
