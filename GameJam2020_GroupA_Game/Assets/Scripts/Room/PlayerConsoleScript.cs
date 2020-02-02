@@ -62,12 +62,12 @@ public class PlayerConsoleScript : MonoBehaviour
                 //Console is broken. Option to repair
 
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     isReady = true;
                 }
 
-                if (isReady = true && Input.GetKeyUp(KeyCode.Space))
+                if (isReady = true && Input.GetKeyUp(KeyCode.R))
                 {
 
                     isRepairing = true;
