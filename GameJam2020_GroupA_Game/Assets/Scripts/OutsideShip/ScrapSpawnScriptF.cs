@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScrapSpawnScriptF : MonoBehaviour
 {
     [SerializeField]
-    private GameObject scrapPiece;
+    private GameObject[] scrapPiece;
     [SerializeField]
     private float collectableChance;
     [SerializeField]
@@ -38,7 +38,8 @@ public class ScrapSpawnScriptF : MonoBehaviour
             {
                 randX = Random.Range(range[0].x, range[1].x);
                 randY = Random.Range(range[0].y, range[1].y);
-                Instantiate(scrapPiece, new Vector3(randX, randY, 0), Quaternion.identity);
+                GameObject scrapV = scrapPiece[Random.Range(0, scrapPiece.Length - 1)];
+                Instantiate(scrapV, new Vector3(randX, randY, 0), Quaternion.identity);
             }
             timeLeft = cooldown;
         }

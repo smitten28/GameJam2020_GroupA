@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeteorSpawnScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject meteor;
+    private GameObject[] meteor;
     [SerializeField]
     private float meteorChance;
     [SerializeField]
@@ -38,7 +38,8 @@ public class MeteorSpawnScript : MonoBehaviour
             {
                 randX = Random.Range(range[0].x, range[1].x);
                 randY = Random.Range(range[0].y, range[1].y);
-                Instantiate(meteor, new Vector3(randX, randY, 0), Quaternion.identity);
+                GameObject meteorV = meteor[Random.Range(0, meteor.Length - 1)];
+                Instantiate(meteorV, new Vector3(randX, randY, 0), Quaternion.identity);
             }
             timeLeft = cooldown;
         }
