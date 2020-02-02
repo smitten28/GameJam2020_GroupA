@@ -90,7 +90,7 @@ public class PlayerConsoleScript : MonoBehaviour
 
 
                     // Finished
-                    if (Input.GetKeyDown(KeyCode.Space) || console.GetComponent<ConsoleScript>().getRoomConsoleHealth() >= console.GetComponent<ConsoleScript>().getMaxHealth())
+                    if (Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Horizontal") > 0 || console.GetComponent<ConsoleScript>().getRoomConsoleHealth() >= console.GetComponent<ConsoleScript>().getMaxHealth())
                     {
 
 
@@ -98,7 +98,6 @@ public class PlayerConsoleScript : MonoBehaviour
                         Debug.Log("Done");
                         isRepairing = false;
                         isReady = false;
-                        byConsole = false; //Stops the player from immediately continuing(or getting stuck)
                         if (console.GetComponent<ConsoleScript>().getRoomScript().returnRoomType() == 2)
                         {
                         console.transform.parent.GetComponent<ReactorRoom>().setIsEverRepaired();
