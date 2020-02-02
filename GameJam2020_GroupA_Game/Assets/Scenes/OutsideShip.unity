@@ -588,8 +588,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca66f177a111213448b43aa7492f8c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrapPiece: {fileID: 2886509951744126874, guid: 499b3a91b66ef2a46b1a67a9c22e65ef,
-    type: 3}
+  scrapPiece:
+  - {fileID: 2886509951744126874, guid: 499b3a91b66ef2a46b1a67a9c22e65ef, type: 3}
+  - {fileID: 3644391380867634111, guid: b8f10d37a70821a43bd4738567e84757, type: 3}
+  - {fileID: 3616711175942346343, guid: 08aaefd1218bbb9408da81712f915534, type: 3}
   collectableChance: 100
   cooldown: 2
   range:
@@ -654,7 +656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c596b4504c0cb6543a270f4c7359357c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteor: {fileID: 3431014646362987257, guid: 5b8da77af89c75847b3424d893bcf641, type: 3}
+  meteor:
+  - {fileID: 3431014646362987257, guid: 5b8da77af89c75847b3424d893bcf641, type: 3}
+  - {fileID: 2084408704427621590, guid: e9c6f200e46e40c4db02a6ae7c7fde64, type: 3}
+  - {fileID: 5421911020039352099, guid: 690866fe735b0644e89472d9853896d3, type: 3}
+  - {fileID: 4780244001358740300, guid: 58822fbc24fdb6942853db2bb231537e, type: 3}
   meteorChance: 50
   cooldown: 5
   range:

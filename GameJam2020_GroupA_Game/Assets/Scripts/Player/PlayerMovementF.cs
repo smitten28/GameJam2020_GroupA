@@ -22,6 +22,8 @@ public class PlayerMovementF : MonoBehaviour
     {
         playerRig = GetComponent<Rigidbody2D>();
 
+        //gameManager = GameObject.Find("SpaceShip").GetComponent<GameManager>();
+        //This doesn't work anymore. Gamemanager was changed
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 

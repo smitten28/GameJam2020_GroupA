@@ -127,8 +127,15 @@ public class PlayerConsoleScript : MonoBehaviour
                 }
             }
         }
-
+        // End of Player Interacts with Console
         // =============================================================================
+
+
+
+        //=================================================================
+        //Player spending Scrap on doors (May be expanded later)
+
+
     }
 
 

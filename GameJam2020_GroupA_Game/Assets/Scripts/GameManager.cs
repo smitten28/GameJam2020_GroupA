@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     static private int fuel;
     static private int turretActve;
     static private int shieldTotalLevel;
-    static private float scrap;
+    static private float scrap = 0;
     static private float enemyWaveTime;
     static private int phase;
     static private float maxWaveTime;
