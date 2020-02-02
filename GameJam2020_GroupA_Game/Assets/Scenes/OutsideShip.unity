@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 1469566096}
   - component: {fileID: 1469566099}
   - component: {fileID: 1469566100}
+  - component: {fileID: 1469566101}
   m_Layer: 0
   m_Name: outsideship
   m_TagString: Untagged
@@ -828,6 +829,18 @@ MonoBehaviour:
   maxTime: 60
   curTimeRemaining: 60
   timerText: {fileID: 0}
+--- !u!114 &1469566101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469566095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005ea80cc4f77f548850dd09fb1a4c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648978483
 GameObject:
   m_ObjectHideFlags: 3

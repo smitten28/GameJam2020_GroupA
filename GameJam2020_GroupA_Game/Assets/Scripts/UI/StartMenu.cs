@@ -56,4 +56,9 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainShip");
     }
+    public void gameOverRetry()
+    {
+        SceneManager.LoadScene("StartMenu");
+
+    }
 }

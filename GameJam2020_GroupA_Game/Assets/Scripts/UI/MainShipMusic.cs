@@ -8,6 +8,9 @@ public class MainShipMusic : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().stop("TitleMusic");
+        FindObjectOfType<AudioManager>().play("InsideBackgroundMusic");
+        FindObjectOfType<AudioManager>().stop("OutsideBackgroundMusic");
+        FindObjectOfType<AudioManager>().playOneShot("OnStartBackgroundMusic");
     }
 
 

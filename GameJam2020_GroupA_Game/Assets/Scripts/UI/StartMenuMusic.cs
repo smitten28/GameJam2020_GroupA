@@ -8,6 +8,7 @@ public class StartMenuMusic : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().play("TitleMusic");
+        FindObjectOfType<AudioManager>().stop("GameOver");
     }
 
 
