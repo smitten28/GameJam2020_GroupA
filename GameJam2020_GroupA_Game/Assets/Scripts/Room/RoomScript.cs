@@ -83,7 +83,7 @@ public class RoomScript : MonoBehaviour
     }
 
 
-    private void upgradeRoom()
+    public bool upgradeRoom()
     {
         if (maxRoomUpgrades > roomUpgrade + 1)
         {
@@ -129,7 +129,10 @@ public class RoomScript : MonoBehaviour
                 }
 
                 manager.subtrScrap(upgradeCost);
+                return true;
             }
+            return false;
         }
+        return false;
     }
 }

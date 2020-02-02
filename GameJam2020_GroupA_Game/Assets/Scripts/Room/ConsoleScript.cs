@@ -49,4 +49,8 @@ public class ConsoleScript : MonoBehaviour
     {
         return roomScript.canBeRepaired;
     }
+    public RoomScript getRoomScript()
+    {
+        return roomScript;
+    }
 }
