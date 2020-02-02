@@ -185,7 +185,7 @@ MonoBehaviour:
     * Cassy
     Fallon
 
-    * Yuki'
+    * Emma Harbaugh'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45f3b0754d7f94d4ea18641891f5d5b9, type: 2}
   m_sharedMaterial: {fileID: -8306706741693396457, guid: 45f3b0754d7f94d4ea18641891f5d5b9,
@@ -255,10 +255,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: -9.633789, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 253296}
-    characterCount: 72
+    characterCount: 81
     spriteCount: 0
-    spaceCount: 13
-    wordCount: 9
+    spaceCount: 14
+    wordCount: 10
     linkCount: 0
     lineCount: 5
     pageCount: 1
@@ -3944,7 +3944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1097911498
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5693,7 +5693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1418035534
 RectTransform:
   m_ObjectHideFlags: 0
