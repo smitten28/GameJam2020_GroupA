@@ -99,7 +99,7 @@ public class PlayerConsoleScript : MonoBehaviour
                         isRepairing = false;
                         isReady = false;
                         byConsole = false; //Stops the player from immediately continuing(or getting stuck)
-
+                        console.transform.parent.GetComponent<ReactorRoom>().setIsEverRepaired();
                         GetComponent<MovementInside>().setMovementEnabled(true);
                     }
                 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReactorRoom : MonoBehaviour
 {
     public float decaySpeed;
+    public bool isEverRepaired;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,10 @@ public class ReactorRoom : MonoBehaviour
     void Update()
     {
         reactorDecay();
+        if (this.gameObject.GetComponent<RoomScript>().returnHealth() <= 0 && isEverRepaired)
+        {
+            //game is over
+        }
     }
 
     private void reactorDecay()
@@ -23,5 +28,9 @@ public class ReactorRoom : MonoBehaviour
         {
             this.gameObject.GetComponent<RoomScript>().TakeDamage(decaySpeed * Time.deltaTime);
         }
+    }
+    public void setIsEverRepaired()
+    {
+        isEverRepaired = true;
     }
 }
