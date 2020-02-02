@@ -114,11 +114,11 @@ public class PlayerConsoleScript : MonoBehaviour
                     //attept to upgrade the console
                     if (console.GetComponent<ConsoleScript>().getRoomScript().upgradeRoom())
                     {
-                        Debug.Log("Upgraded");
+                        //Debug.Log("Upgraded");
                     }
                     else
                     {
-                        Debug.Log("NoUpgrade");
+                        //Debug.Log("NoUpgrade");
                     }
                 }
             }
