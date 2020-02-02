@@ -23,13 +23,18 @@ public class Waves : MonoBehaviour
     [SerializeField]
     private Text timerText;
 
+    private void Start()
+    {
+        restartTimer();
+        spawnEnemy();
+    }
 
     private void Update()
     {
         if (waveTime > 0)
         {
             updateText();
-            spawnEnemy();
+
             waveTime -= Time.deltaTime;
             if (waveTime <= 0)
             {
@@ -71,6 +76,6 @@ public class Waves : MonoBehaviour
 
     private void updateText()
     {
-        timerText.text = waveTime.ToString();
+        //timerText.text = waveTime.ToString();
     }
 }
