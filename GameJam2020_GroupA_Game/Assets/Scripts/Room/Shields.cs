@@ -12,10 +12,13 @@ public class Shields : MonoBehaviour
     }
     public void takeDamage(float a)
     {
-        if (shieldHealth - a <= 0)
+        shieldHealth -= a;
+        if (shieldHealth <= 0)
         {
             shieldHealth = 0;
             isActive = false;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            transform.Find("Sprite").GetComponent<SpriteRenderer>().enabled = false;
         }
     }
     public void addHealth(float a)
@@ -23,6 +26,8 @@ public class Shields : MonoBehaviour
         if (shieldHealth <= 0)
         {
             isActive = true;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            transform.Find("Sprite").GetComponent<SpriteRenderer>().enabled = true;
         }
         shieldHealth += a;
     }

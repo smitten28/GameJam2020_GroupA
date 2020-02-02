@@ -14,7 +14,7 @@ public class PlayerConsoleScript : MonoBehaviour
     private bool byConsole = false;
 
     [SerializeField]
-    private float repairSpeed;
+    static private float repairSpeed;
 
     private float percentRepair = 0; //This may be obsolete
 
@@ -171,5 +171,8 @@ public class PlayerConsoleScript : MonoBehaviour
         }
     }
     // ================================================================
-
+    public void upgradeRepairSpeed(int a)
+    {
+        repairSpeed += a;
+    }
 }

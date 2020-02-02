@@ -110,7 +110,7 @@ public class RoomScript : MonoBehaviour
                 else if (roomType == 3)
                 {
                     //workshop
-
+                    GameObject.Find("RoomPin").GetComponent<PlayerConsoleScript>().upgradeRepairSpeed(10); 
                 }
                 else if (roomType == 4)
                 {
