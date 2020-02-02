@@ -8,6 +8,7 @@ public class TurretScript : MonoBehaviour
     [SerializeField] private bool active;
     [SerializeField] private float cooldown;
     private float timeLeft;
+    private GameObject room;
 
     private GameObject[] targets;
     private GameObject activeTarget;
@@ -16,6 +17,7 @@ public class TurretScript : MonoBehaviour
     void Start()
     {
         targets = GameObject.FindGameObjectsWithTag("Enemy");
+        room = transform.parent.transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -30,6 +32,18 @@ public class TurretScript : MonoBehaviour
             catch
             {
                 findTarget();
+            }
+
+            if (!room.GetComponent<RoomScript>().returnActiveStatus())
+            {
+                deactivate();
+            }
+        }
+        else
+        {
+            if(room.GetComponent<RoomScript>().returnActiveStatus())
+            {
+                activate();
             }
         }
     }
