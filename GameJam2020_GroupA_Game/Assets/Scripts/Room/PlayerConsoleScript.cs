@@ -104,6 +104,24 @@ public class PlayerConsoleScript : MonoBehaviour
                     }
                 }
             }
+            //checking for upgrade after is by and has full heal
+            if (console.GetComponent<ConsoleScript>().getRoomConsoleHealth() == console.GetComponent<ConsoleScript>().getMaxHealth())
+            {
+                //the console has max health
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //e is the interact to upgrade console
+                    //attept to upgrade the console
+                    if (console.GetComponent<ConsoleScript>().getRoomScript().upgradeRoom())
+                    {
+                        Debug.Log("Upgraded");
+                    }
+                    else
+                    {
+                        Debug.Log("NoUpgrade");
+                    }
+                }
+            }
         }
 
         // =============================================================================
