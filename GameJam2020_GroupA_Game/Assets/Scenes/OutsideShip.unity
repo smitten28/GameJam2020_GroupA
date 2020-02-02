@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1469566097}
   - component: {fileID: 1469566096}
   - component: {fileID: 1469566099}
+  - component: {fileID: 1469566100}
   m_Layer: 0
   m_Name: outsideship
   m_TagString: Untagged
@@ -812,6 +813,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1469566100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469566095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc7771d60a187a45ae753ccbf0076c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 60
+  curTimeRemaining: 60
+  timerText: {fileID: 0}
 --- !u!1 &1648978483
 GameObject:
   m_ObjectHideFlags: 3
